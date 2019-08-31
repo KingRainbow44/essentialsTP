@@ -312,14 +312,6 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                             }
                         }
                     }
-                    else
-                    {
-                        $player->sendMessage(TextFormat::RED.$this->config->get("Lang_no_spawn_set"));
-                        $player->teleport($player->getLevel()->getSpawnLocation());
-                        $this->update_cooldown($player->getName(), time(), 'spawn');
-                        $player->sendMessage($this->config->get("Lang_teleport_spawn_original"));
-                        return true;
-                    }
                 }
                 else
                 {
@@ -485,14 +477,6 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
 
                             }
                         }
-                    }
-                    else
-                    {
-                        $player->sendMessage(TextFormat::RED.$this->config->get("Lang_no_spawn_set"));
-                        $event->setRespawnPosition($player->getLevel()->getSpawnLocation());
-                        $this->update_cooldown($player->getName(), time(), 'spawn');
-                        $player->sendMessage($this->config->get("Lang_teleport_spawn_original"));
-                        return true;
                     }
             }
         }
@@ -1135,14 +1119,6 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
 
                                 }
                             }
-                        }
-                        else
-                        {
-                            $sender->sendMessage(TextFormat::RED.$this->config->get("Lang_no_spawn_set"));
-                            $sender->teleport($sender->getLevel()->getSpawnLocation());
-                            $this->update_cooldown($sender->getName(), time(), 'spawn');
-                            $sender->sendMessage($this->config->get("Lang_teleport_spawn_original"));
-                            return true;
                         }
                     }
                     else
