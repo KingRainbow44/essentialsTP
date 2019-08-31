@@ -32,18 +32,18 @@ commands:
   description: Teleports to world spawn point.
   usage: "/spawn"
   permission: legendteleportessentials.command.spawn
- avwarp:
-  description: Warps you to a location /avwarp will list avwarps /avwarp <avwarpname> will teleport you.
-  usage: "/avwarp or /avwarp <avwarpname>"
+ warp:
+  description: Warps you to a location /warp will list warps /warp <warpname> will teleport you.
+  usage: "/warp or /warp <warpname>"
   permission: legendteleportessentials.command.tpahere
- setavwarp:
-  description: Sets a avwarp location.
-  usage: "/setavwarp <avwarpname>"
-  permission: legendteleportessentials.command.setavwarp
- delavwarp:
-  description: Delete a avwarp location.
-  usage: "/delavwarp <avwarpname>"
-  permission: legendteleportessentials.command.delavwarp
+ setwarp:
+  description: Sets a warp location.
+  usage: "/setwarp <warpname>"
+  permission: legendteleportessentials.command.setwarp
+ delwarp:
+  description: Delete a warp location.
+  usage: "/delwarp <warpname>"
+  permission: legendteleportessentials.command.delwarp
  tpa:
   description: Send teleport request to player to teleport you to player.
   usage: "/tpa <player>"
@@ -81,14 +81,14 @@ permissions:
      legendteleportessentials.command.tpa:
       description: "Allows player to teleport to another player"
       default: true
-     legendteleportessentials.command.delavwarp:
-      description: "Allows player to delete avwarps"
+     legendteleportessentials.command.delwarp:
+      description: "Allows player to delete warps"
       default: op
-     legendteleportessentials.command.setavwarp:
-      description: "Allows player to set avwarps"
+     legendteleportessentials.command.setwarp:
+      description: "Allows player to set warps"
       default: op
-     legendteleportessentials.command.avwarp:
-      description: "Allows player use avwarps"
+     legendteleportessentials.command.warp:
+      description: "Allows player use warps"
       default: true
      legendteleportessentials.command.setspawn:
       description: "Allows player to set spawn for world"
@@ -114,8 +114,8 @@ permissions:
      legendteleportessentials.command.bedsethome:
       description: "Allows player to set home with their bed"
       default: true
-     legendteleportessentials.command.sign.avwarp:
-      description: "Allows player to use avwarp signs"
+     legendteleportessentials.command.sign.warp:
+      description: "Allows player to use warp signs"
       default: true
      legendteleportessentials.command.sign.wild:
       description: "Allows player to use wild signs"
@@ -123,8 +123,8 @@ permissions:
      legendteleportessentials.command.sign.spawn:
       description: "Allows player to use spawn signs"
       default: true
-     legendteleportessentials.command.sign.avwarp.create:
-      description: "Allows player to create avwarp signs"
+     legendteleportessentials.command.sign.warp.create:
+      description: "Allows player to create warp signs"
       default: op
      legendteleportessentials.command.sign.wild.create:
       description: "Allows player to create wild signs"
@@ -132,8 +132,8 @@ permissions:
      legendteleportessentials.command.sign.spawn.create:
       description: "Allows player to create spawn signs"
       default: op
-     legendteleportessentials.command.sign.avwarp.break:
-      description: "Allows player to break avwarp signs"
+     legendteleportessentials.command.sign.warp.break:
+      description: "Allows player to break warp signs"
       default: op
      legendteleportessentials.command.sign.wild.break:
       description: "Allows player to break wild signs"
