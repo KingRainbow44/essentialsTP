@@ -1,143 +1,143 @@
-name: essentialsTP
+name: LegendTeleportEssentials
 main: essentialsTP\essentialsTP
-version: 1.2.2
+version: 1.0.0
 api: [3.0.0]
 extensions: [sqlite3]
 commands:
  home:
   description: Teleports you home /home will list homes /home <homename> will teleport you.
   usage: "/home or /home <homename>"
-  permission: essentialstp.command.home
+  permission: legendteleportessentials.command.home
  sethome:
   description: Sets your home, use names for multiple homes.
   usage: "/sethome <homename>"
-  permission: essentialstp.command.sethome
+  permission: legendteleportessentials.command.sethome
  delhome:
   description: Delete your selected home.
   usage: "/delhome <homename>"
-  permission: essentialstp.command.delhome
+  permission: legendteleportessentials.command.delhome
  back:
   description: Teleports you to your last known death location.
   usage: "/back"
-  permission: essentialstp.command.back
+  permission: legendteleportessentials.command.back
  wild:
   description: Teleport to a random location in the world.
   usage: "/wild"
-  permission: essentialstp.command.wild
+  permission: legendteleportessentials.command.wild
  setspawn:
   description: Sets world spawn point.
   usage: "/setspawn"
-  permission: essentialstp.command.setspawn
+  permission: legendteleportessentials.command.setspawn
  spawn:
   description: Teleports to world spawn point.
   usage: "/spawn"
-  permission: essentialstp.command.spawn
- warp:
-  description: Warps you to a location /warp will list warps /warp <warpname> will teleport you.
-  usage: "/warp or /warp <warpname>"
-  permission: essentialstp.command.tpahere
- setwarp:
-  description: Sets a warp location.
-  usage: "/setwarp <warpname>"
-  permission: essentialstp.command.setwarp
- delwarp:
-  description: Delete a warp location.
-  usage: "/delwarp <warpname>"
-  permission: essentialstp.command.delwarp
+  permission: legendteleportessentials.command.spawn
+ avwarp:
+  description: Warps you to a location /avwarp will list avwarps /avwarp <avwarpname> will teleport you.
+  usage: "/avwarp or /avwarp <avwarpname>"
+  permission: legendteleportessentials.command.tpahere
+ setavwarp:
+  description: Sets a avwarp location.
+  usage: "/setavwarp <avwarpname>"
+  permission: legendteleportessentials.command.setavwarp
+ delavwarp:
+  description: Delete a avwarp location.
+  usage: "/delavwarp <avwarpname>"
+  permission: legendteleportessentials.command.delavwarp
  tpa:
   description: Send teleport request to player to teleport you to player.
   usage: "/tpa <player>"
-  permission: essentialstp.command.tpa
+  permission: legendteleportessentials.command.tpa
  tpahere:
   description: Send teleport request to teleport player to you.
   usage: "/tpahere <player>"
-  permission: essentialstp.command.tpahere
+  permission: legendteleportessentials.command.tpahere
  tpaccept:
   description: Accept a teleport request.
   usage: "/tpaccept"
-  permission: essentialstp.command.tpaccept
+  permission: legendteleportessentials.command.tpaccept
  tpdeny:
    description: decline all active teleport requests.
    usage: "/tpdeny"
-   permission: essentialstp.command.tpdeny
+   permission: legendteleportessentials.command.tpdeny
 permissions:
- essentialstp.*:
+ legendteleportessentials.*:
   default: op
   description: "Allows all essentialsTP commands"
   children:
-   essentialstp.command.*:
+   legendteleportessentials.command.*:
     description: "Allows player to use commands"
     default: op
     children:
-     essentialstp.command.tpdeny:
+     legendteleportessentials.command.tpdeny:
       description: "Allows player to decline request"
       default: true
-     essentialstp.command.tpaccept:
+     legendteleportessentials.command.tpaccept:
       description: "Allows player to accept request"
       default: true
-     essentialstp.command.tpahere:
+     legendteleportessentials.command.tpahere:
       description: "Allows player to teleport player to them"
       default: true
-     essentialstp.command.tpa:
+     legendteleportessentials.command.tpa:
       description: "Allows player to teleport to another player"
       default: true
-     essentialstp.command.delwarp:
-      description: "Allows player to delete warps"
+     legendteleportessentials.command.delavwarp:
+      description: "Allows player to delete avwarps"
       default: op
-     essentialstp.command.setwarp:
-      description: "Allows player to set warps"
+     legendteleportessentials.command.setavwarp:
+      description: "Allows player to set avwarps"
       default: op
-     essentialstp.command.warp:
-      description: "Allows player use warps"
+     legendteleportessentials.command.avwarp:
+      description: "Allows player use avwarps"
       default: true
-     essentialstp.command.setspawn:
+     legendteleportessentials.command.setspawn:
       description: "Allows player to set spawn for world"
       default: op
-     essentialstp.command.spawn:
+     legendteleportessentials.command.spawn:
       description: "Allows player use spawn command"
       default: true
-     essentialstp.command.wild:
+     legendteleportessentials.command.wild:
       description: "Allows player to teleport to a random location in world"
       default: true
-     essentialstp.command.back:
+     legendteleportessentials.command.back:
       description: "Allows player go back to their last death location"
       default: true
-     essentialstp.command.delhome:
+     legendteleportessentials.command.delhome:
       description: "Allows player to delete their homes"
       default: true
-     essentialstp.command.sethome:
+     legendteleportessentials.command.sethome:
       description: "Allows player to set their homes"
       default: true
-     essentialstp.command.home:
+     legendteleportessentials.command.home:
       description: "Allows player to use the home command"
       default: true
-     essentialstp.command.bedsethome:
+     legendteleportessentials.command.bedsethome:
       description: "Allows player to set home with their bed"
       default: true
-     essentialstp.command.sign.warp:
-      description: "Allows player to use warp signs"
+     legendteleportessentials.command.sign.avwarp:
+      description: "Allows player to use avwarp signs"
       default: true
-     essentialstp.command.sign.wild:
+     legendteleportessentials.command.sign.wild:
       description: "Allows player to use wild signs"
       default: op
-     essentialstp.command.sign.spawn:
+     legendteleportessentials.command.sign.spawn:
       description: "Allows player to use spawn signs"
       default: true
-     essentialstp.command.sign.warp.create:
-      description: "Allows player to create warp signs"
+     legendteleportessentials.command.sign.avwarp.create:
+      description: "Allows player to create avwarp signs"
       default: op
-     essentialstp.command.sign.wild.create:
+     legendteleportessentials.command.sign.wild.create:
       description: "Allows player to create wild signs"
       default: op
-     essentialstp.command.sign.spawn.create:
+     legendteleportessentials.command.sign.spawn.create:
       description: "Allows player to create spawn signs"
       default: op
-     essentialstp.command.sign.warp.break:
-      description: "Allows player to break warp signs"
+     legendteleportessentials.command.sign.avwarp.break:
+      description: "Allows player to break avwarp signs"
       default: op
-     essentialstp.command.sign.wild.break:
+     legendteleportessentials.command.sign.wild.break:
       description: "Allows player to break wild signs"
       default: op
-     essentialstp.command.sign.spawn.break:
+     legendteleportessentials.command.sign.spawn.break:
       description: "Allows player to break spawn signs"
       default: op
